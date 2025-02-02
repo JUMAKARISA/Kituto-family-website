@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kituto Family Website</title>
+    <style>
+        /* General Body Style */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #0044cc; /* Blue Color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Welcome Section */
+        .intro {
+            padding: 50px;
+            text-align: center;
+            background-color: #333;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+        }
+
+        .intro .login-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #0044cc;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .intro .login-btn:hover {
+            background-color: #003399;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Login Page Styles */
+        .login {
+            padding: 50px;
+            text-align: center;
+            background-color: #222;
+        }
+
+        .login h2 {
+            font-size: 2em;
+        }
+
+        .login form {
+            margin-top: 20px;
+        }
+
+        .login input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .login button {
+            padding: 10px 20px;
+            background-color: #0044cc;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .login button:hover {
+            background-color: #003399;
+        }
+
+        /* Upload Page Styles */
+        .upload {
+            padding: 50px;
+            text-align: center;
+            background-color: #222;
+        }
+
+        .upload form {
+            margin-top: 20px;
+        }
+
+        .upload input[type="file"] {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Homepage Section -->
+    <header>
+        <div class="navbar">
+            <h1>Welcome to the Kituto Family Website</h1>
+        </div>
+    </header>
+
+    <section class="intro">
+        <p>Our family motto: <strong>"There for Each Other"</strong></p>
+        <p>This website is a space for us to connect, share advice, celebrate family moments, and keep track of important dates. We're glad you're here!</p>
+        <a href="login.html" class="login-btn">Log In</a>
+    </section>
+
+    <!-- Login Section -->
+    <section class="login" id="login-page">
+        <h2>Login to the Kituto Family Website</h2>
+        <form id="login-form">
+            <label for="phone">Enter your phone number:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required><br>
+            <button type="submit">Send Verification Code</button>
+        </form>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="upload" id="upload-page">
+        <h2>Upload Your Family Pictures</h2>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="category">Choose a category:</label>
+            <select id="category" name="category">
+                <option value="events">Events</option>
+                <option value="vacations">Vacations</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <label for="photo">Select photo:</label><br>
+            <input type="file" id="photo" name="photo" required><br><br>
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kituto Family</p>
+    </footer>
+
+    <!-- JavaScript for Handling Phone Verification -->
+    <script>
+        // Handling login form submission (phone verification simulation)
+        document.querySelector('#login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let phoneNumber = document.querySelector('#phone').value;
+            alert('Verification code sent to ' + phoneNumber);
+        });
+    </script>
+
+</body>
+</html>
